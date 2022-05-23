@@ -1,10 +1,12 @@
 import ColorBox from "./components/ColorBox";
+import ColorContext from "./contexts/color";
 
 function App() {
   return (
-    <div className="App">
+    //Provider은 value값을 명시해 주어야만 한다.
+    <ColorContext.Provider value={{ color: "red" }}>
       <ColorBox />
-    </div>
+    </ColorContext.Provider>
   );
 }
 
